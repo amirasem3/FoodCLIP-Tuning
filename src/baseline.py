@@ -23,7 +23,7 @@ from tqdm import tqdm
 from src.utils import set_seed, get_device
 from src.data import  make_loaders
 from src.prompts import TEMPLATES
-#TODO: define the accuracy_topk in eval
+from src.eval import accuracy_topk
 
 def build_zeroshot_text_features(clip_model, tokenizer, classnames, device):
     # average text features across templates per class
