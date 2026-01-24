@@ -18,3 +18,22 @@ def accuracy_topk(logits: torch.Tensor, targets: torch.Tensor, topk=(1, 5)):
         correct_k = correct[:, :k].any(dim=1).float().mean().item()
         res[f"top{k}"] = correct_k
     return res
+
+@torch.no_grad()
+def evaluate(model, loader, device):
+    model.eval()
+    all_top1 = []
+    all_top5 = []
+    for images, targets in loader:
+        images = images.to(device)
+        targets = targets.to(device)
+
+        logits = model(images)
+        acc = accuracy_topk(logits, targets, topk=(1, 5))
+        all_top1.append(acc["top1"])
+        all_top5.append(acc["top5"])
+
+    return {
+        "top1": float(sum(all_top1) / len(all_top1)),
+        "top5": float(sum(all_top5) / len(all_top5)),
+    }
