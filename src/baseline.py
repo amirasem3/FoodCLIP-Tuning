@@ -21,7 +21,7 @@ import torch.nn.functional as F
 from tqdm import tqdm
 
 from src.utils import set_seed, get_device
-#TODO: define make_loaders in data
+from src.data import  make_loaders
 from src.prompts import TEMPLATES
 #TODO: define the accuracy_topk in eval
 
