@@ -1,7 +1,4 @@
-torch
-torchvision
-open_clip_torch
-tqdm
+stqdm
 numpy
 pandas
 pyyaml
