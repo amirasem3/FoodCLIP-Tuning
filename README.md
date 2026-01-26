@@ -1,3 +1,13 @@
+## MacOS and Linux Installation & Execution Guide
+First, run the below command:
+```powershell
+chmod 777 run_tunner.sh
+```
+then you should use the below command to run the whole project: 
+
+```powershell
+./run_tunner.sh
+```
 ## Windows Installation & Execution Guide
 
 This project requires **Python 3.9 or newer (64-bit)**.
