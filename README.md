@@ -1,8 +1,3 @@
-Here is a **clean, professional README section** you can copy directly into your repository.
-It is **clear, explicit, and grader-proof**.
-
----
-
 ## Windows Installation & Execution Guide
 
 This project requires **Python 3.9 or newer (64-bit)**.
