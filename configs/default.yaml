@@ -1,15 +1,5 @@
-"""
-Project Configuration for controlling the full pipeline as below:
-- Dataset location and subset of Food-101 classes
-- Clip backbone
-- Pretrained weights
-- Prompt tuning parameter (number of learnable prompt tokens)
-- Training hyperparameters (bach size, epochs, learning rate)
-"""
-
-
 seed: 42
-device: "cuda"
+device: "cpu"
 
 data:
   root: "./data"
