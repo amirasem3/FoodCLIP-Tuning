@@ -79,6 +79,8 @@ source "$VENV_DIR/bin/activate"
 # -----------------------------
 echo "[i] Upgrading pip..."
 python -m pip install --upgrade pip
+python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+python -m pip install open_clip_torch
 
 if [ ! -f "$REQ_FILE" ]; then
   echo "[X] $REQ_FILE not found. Please ensure requirements.txt exists in repo root."
