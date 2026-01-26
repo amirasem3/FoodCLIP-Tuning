@@ -1,8 +1,48 @@
-# ============================
-# Project Configuration for controlling the full pipeline as below:
-# - Dataset location and subset of Food-101 classes
-# - Clip backbone
-# - Pretrained weights
-# - Prompt tuning parameter (number of learnable prompt tokens)
-# - Training hyperparameters (bach size, epochs, learning rate)
-# ============================
+"""
+Project Configuration for controlling the full pipeline as below:
+- Dataset location and subset of Food-101 classes
+- Clip backbone
+- Pretrained weights
+- Prompt tuning parameter (number of learnable prompt tokens)
+- Training hyperparameters (bach size, epochs, learning rate)
+"""
+
+
+seed: 42
+device: "cuda"
+
+data:
+  root: "./data"
+  subset_classes:
+    - apple_pie
+    - baby_back_ribs
+    - baklava
+    - beef_carpaccio
+    - beef_tartare
+    - bibimbap
+    - cannoli
+    - caprese_salad
+    - cheesecake
+    - chicken_curry
+    - chicken_quesadilla
+    - chicken_wings
+    - chocolate_cake
+    - churros
+    - club_sandwich
+    - crab_cakes
+    - deviled_eggs
+    - donuts
+    - dumplings
+    - edamame
+
+model:
+  clip_name: "ViT-B-32"
+  pretrained: "openai"
+  n_ctx: 8
+
+train:
+  batch_size: 64
+  epochs: 30
+  lr: 0.0001s
+  weight_decagy: 0.0
+  num_workers: 4
