@@ -1,9 +1,11 @@
+## DOWNLOAD DATA
+To run the project, [download](https://download1586.mediafire.com/2frv6tc737mghVvQpkkeyCEZDurliTbVER4GNxE6kR2MlKuOwxJrZr9l-BUxU-0Z9j5QrXS1QfPFcil79uNTtUrmjGlSToibYxnNmXBHELMUdC8nUxZ7BUHIGkgtOeBlOnggY3MMme2fXn8aHzH4nvPQ1MUfElMEEDeDFhQEaNAoxSM/6tqhkkx0fj2t904/food-101.tar.gz) food-101.tar.gz, place it in the "src" directory in the "data" directory, extract it, and then run the scripts to run the whole project.
 ## MacOS and Linux Installation & Execution Guide
-First, run the below command:
+First, run the following command:
 ```powershell
 chmod 777 run_tunner.sh
 ```
-then you should use the below command to run the whole project: 
+Then you should use the following command to run the whole project: 
 
 ```powershell
 ./run_tunner.sh
